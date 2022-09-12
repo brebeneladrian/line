@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Input,
+  ViewChild,
+  Output,
+  EventEmitter,
+} from '@angular/core';
+import { ScaleComponent } from './components/scale/scale.component';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +14,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // alerts: Alert[];
+  @Input() opened: boolean = false;
+  @Output() start: boolean = false;
+
   message: string = 'Prototype of a line-machine !';
-  start: boolean = false;
 
   constructor() {}
 
