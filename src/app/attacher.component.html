@@ -1,0 +1,14 @@
+<div id="child2" *ngIf="showMe">
+  Attacher working:
+  <div class="line-alert alert" role="alert">
+    Attacher:
+    <span class="material-symbols-outlined mic" *ngIf="opened">
+      change_circle
+    </span>
+    <span class="material-symbols-outlined" *ngIf="!opened">
+      warning
+    </span>
+    <span class="material-symbols-outlined" *ngIf="!opened">
+      error
+    </span>
+  </div>
